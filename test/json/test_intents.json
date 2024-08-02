@@ -1,0 +1,60 @@
+{
+    "intents": [
+        {
+            "name": "book_flight",
+            "examples": [
+                "Book a flight from New York to Los Angeles for next week.",
+                "Can you arrange a flight to Tokyo for the conference?"
+            ],
+            "description": "This intent is used to book a flight for a specified destination and date."
+        },
+        {
+            "name": "reserve_hotel",
+            "examples": [
+                "Reserve a hotel room in Paris for the weekend.",
+                "Book a stay at a hotel in San Francisco for next month."
+            ],
+            "description": "This intent is used to reserve a hotel room for a given location and date."
+        },
+        {
+            "name": "order_food",
+            "examples": [
+                "Order a pizza from the local pizzeria.",
+                "Can you get Chinese takeout for dinner tonight?"
+            ],
+            "description": "This intent is used to place a food order from a specified restaurant or cuisine."
+        },
+        {
+            "name": "schedule_meeting",
+            "examples": [
+                "Schedule a meeting with the sales team for tomorrow.",
+                "Set up a conference call with the project managers next Friday."
+            ],
+            "description": "This intent is used to schedule a new meeting or conference call."
+        },
+        {
+            "name": "track_package",
+            "examples": [
+                "Track the package I ordered from Amazon.",
+                "Can you check the status of my delivery from FedEx?"
+            ],
+            "description": "This intent is used to track the status of a package or shipment."
+        },
+        {
+            "name": "update_profile",
+            "examples": [
+                "Update my profile picture and contact details.",
+                "Change my email address and phone number in the system."
+            ],
+            "description": "This intent is used to update personal profile information."
+        },
+        {
+            "name": "create_task",
+            "examples": [
+                "Create a new task to complete the quarterly report.",
+                "Add a task to follow up with the client about the proposal."
+            ],
+            "description": "This intent is used to create a new task with specific details."
+        }
+    ]
+}

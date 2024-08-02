@@ -1,0 +1,134 @@
+{
+    "parameters": [
+        {
+            "name": "previous_title",
+            "description": "Previous title of the event",
+            "format": "string"
+        },
+        {
+            "name": "previous_start_date",
+            "description": "Previous start date of the event",
+            "format": "string,YYYY-MM-DD format"
+        },
+        {
+            "name": "previous_end_date",
+            "description": "Previous end date of the event",
+            "format": "string,YYYY-MM-DD format"
+        },
+        {
+            "name": "event_title",
+            "description": "Title of the event",
+            "format": "string"
+        },
+        {
+            "name": "venue",
+            "description": "Venue where the event is held",
+            "format": "string,Address or name of the venue"
+        },
+        {
+            "name": "event_details",
+            "description": "Detailed information about the event",
+            "format": "string"
+        },
+        {
+            "name": "event_start_date",
+            "description": "Date when the event starts",
+            "format": "string,YYYY-MM-DD format"
+        },
+        {
+            "name": "event_end_date",
+            "description": "Date when the event ends",
+            "format": "string,YYYY-MM-DD format"
+        },
+        {
+            "name": "unique_event_id",
+            "description": "Unique identifier for the event",
+            "format": "string"
+        },
+        {
+            "name": "result_limit",
+            "description": "Maximum number of items to retrieve",
+            "format": "string, numeric value"
+        },
+        {
+            "name": "email_to",
+            "description": "Recipient of the email",
+            "format": "string,Email address format"
+        },
+        {
+            "name": "email_subject",
+            "description": "Subject line of the email",
+            "format": "string"
+        },
+        {
+            "name": "email_content",
+            "description": "Content/body of the email",
+            "format": "string"
+        },
+        {
+            "name": "search_terms",
+            "description": "Keywords or phrases to search for",
+            "format": "string"
+        },
+        {
+            "name": "search_start_time",
+            "description": "Start time for the search period",
+            "format": "string,ISO 8601 format (e.g., '2024-06-27T00:00:00.000Z')"
+        },
+        {
+            "name": "search_end_time",
+            "description": "End time for the search period",
+            "format": "string,ISO 8601 format (e.g., '2024-06-27T23:59:59.999Z')"
+        },
+        {
+            "name": "item_limit",
+            "description": "Maximum number of items to display",
+            "format": "string"
+        },
+        {
+            "name": "slack_channel",
+            "description": "ID of the Slack channel",
+            "format": "string"
+        },
+        {
+            "name": "message_content",
+            "description": "Content of the Slack message",
+            "format": "string"
+        },
+        {
+            "name": "example_intent_1",
+            "description": "Sample intent for illustrative purposes",
+            "format": [
+                "This intent showcases basic functionality and serves as an example."
+            ]
+        },
+        {
+            "name": "email_update_request",
+            "description": "Request to update email details",
+            "format": [
+                "This intent handles requests to update or correct email information."
+            ]
+        },
+        {
+            "name": "test_event_1",
+            "description": "Sample event example 1",
+            "format": [
+                "A test event to verify system functionality."
+            ]
+        },
+        {
+            "name": "test_event_2",
+            "description": "Sample event example 2",
+            "format": [
+                "Another test event for system checks."
+            ]
+        },
+        {
+            "name": "test_event_3",
+            "description": "Sample event example 3",
+            "format": [
+                "Yet another test event for additional verification."
+            ]
+        }
+    ]
+}

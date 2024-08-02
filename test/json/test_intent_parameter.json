@@ -1,0 +1,94 @@
+{
+    "intent_parameter": [
+        {
+            "intent": "update_profile",
+            "parameter": "username",
+            "necessary": true
+        },
+        {
+            "intent": "update_profile",
+            "parameter": "email",
+            "necessary": true
+        },
+        {
+            "intent": "update_profile",
+            "parameter": "phone_number",
+            "necessary": false
+        },
+        {
+            "intent": "update_profile",
+            "parameter": "address",
+            "necessary": false
+        },
+        {
+            "intent": "schedule_meeting",
+            "parameter": "meeting_title",
+            "necessary": true
+        },
+        {
+            "intent": "schedule_meeting",
+            "parameter": "participants",
+            "necessary": true
+        },
+        {
+            "intent": "schedule_meeting",
+            "parameter": "start_time",
+            "necessary": true
+        },
+        {
+            "intent": "schedule_meeting",
+            "parameter": "end_time",
+            "necessary": true
+        },
+        {
+            "intent": "send_reminder",
+            "parameter": "reminder_text",
+            "necessary": true
+        },
+        {
+            "intent": "send_reminder",
+            "parameter": "reminder_time",
+            "necessary": true
+        },
+        {
+            "intent": "send_reminder",
+            "parameter": "recipients",
+            "necessary": false
+        },
+        {
+            "intent": "search_user",
+            "parameter": "username",
+            "necessary": false
+        },
+        {
+            "intent": "search_user",
+            "parameter": "email",
+            "necessary": false
+        },
+        {
+            "intent": "search_user",
+            "parameter": "phone_number",
+            "necessary": false
+        },
+        {
+            "intent": "search_user",
+            "parameter": "max_results",
+            "necessary": false
+        },
+        {
+            "intent": "create_task",
+            "parameter": "task_name",
+            "necessary": true
+        },
+        {
+            "intent": "create_task",
+            "parameter": "due_date",
+            "necessary": true
+        },
+        {
+            "intent": "create_task",
+            "parameter": "priority",
+            "necessary": false
+        }
+    ]
+}

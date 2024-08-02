@@ -1,0 +1,24 @@
+name,description,format
+old_summary,Previous summary of the event,string
+old_start_time,Previous start time of the event,string,ISO 8601 format
+old_end_time,Previous end time of the event,string,ISO 8601 format
+summary,Brief overview of the event,string
+location,Event's location,string,Free-form geographic text
+description,Detailed description of the event,string
+start_time,Event start time,string,ISO 8601 format
+end_time,Event end time,string,ISO 8601 format
+event_id,Identifier for the event,string,Unique alphanumeric identifier
+max_results,Maximum results to return,string,Number of results (integer)
+recipient,Email recipient address,string,Email format
+subject,Email subject line,string
+body,Content of the email,string
+search_query,Keywords for search,string
+time_min,Start time for search,string,YYYY-MM-DDTHH:MM:SS.MMMZ (e.g., '2024-06-27T00:00:00.000Z')
+time_max,End time for search,string,YYYY-MM-DDTHH:MM:SS.MMMZ (e.g., '2024-06-27T00:00:00.000Z')
+channel_id,Slack channel identifier,string
+text,Text message content,string
+summary,Event summary,string
+start_time,Event start time,string,ISO 8601 format
+dummy_param_1,Sample parameter for testing,string
+dummy_param_2,Another sample parameter for testing,string
+dummy_param_3,Yet another sample parameter for testing,string
