@@ -1,4 +1,4 @@
-# ToolDB : Database Management tool
+# ToolDB : Database Management Tool
 
 ## Overview
 
