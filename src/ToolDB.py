@@ -180,11 +180,15 @@ def intent_data_entry():
     global INTENT
     display(cooking)
     INTENT['name'] = Console().input("\nEnter name: ")
+    if INTENT['name'] == '_exit_':
+        selection_menu(option_dict['main menu'])
     while intent_check(INTENT['name'])[0]:
         clear()
         display(match_error)
         Console().print("\nIntent already exists , try again ")
         INTENT['name'] = Console().input("\nEnter name: ")
+        if INTENT['name'] == '_exit_':
+            selection_menu(option_dict['main menu'])
     clear()
     display(cooking)
     Console().print("\nEnter examples (end with EOF / Ctrl-D):\n")
@@ -194,6 +198,8 @@ def intent_data_entry():
     clear()
     display(cooking)
     INTENT['description'] = Console().input("\n\nEnter description: ")
+    if INTENT['description'] == '_exit_':
+        selection_menu(option_dict['main menu'])
     data_entry_preview("intent", INTENT)
 
 
@@ -215,7 +221,7 @@ def link_intent_to_parameter_entry():
     while not intent_check(INTENT_PARAMETER['intent'])[0]:
         clear()
         display(search_error)
-        if INTENT_PARAMETER['intent'] == "abort":
+        if INTENT_PARAMETER['intent'] == "_exit_":
             selection_menu(option_dict['main menu'])
         Console().print("Intent does not exist\n\n")
         INTENT_PARAMETER['intent'] = Console().input("Enter valid intent: ")
@@ -226,7 +232,7 @@ def link_intent_to_parameter_entry():
     while not parameter_check(INTENT_PARAMETER['parameter'])[0]:
         clear()
         display(search_error)
-        if INTENT_PARAMETER['parameter'] == "abort":
+        if INTENT_PARAMETER['parameter'] == "_exit_":
             selection_menu(option_dict['main menu'])
         Console().print("parameter does not exist\n\n")
         INTENT_PARAMETER['parameter'] = Console().input("Enter valid parameter: ")
@@ -251,21 +257,29 @@ def parameter_data_entry():
     display(cooking)
 
     PARAMETER['name'] = Console().input("Enter name: ")
+    if PARAMETER['name'] == "_exit_":
+        selection_menu(option_dict['main menu'])
     while parameter_check(PARAMETER['name'])[0]:
         clear()
         display(search_error)
         print("parameter already exist, try again")
         PARAMETER['name'] = Console().input("Enter name: ")
+        if PARAMETER['name'] == "_exit_":
+            selection_menu(option_dict['main menu'])
 
     clear()
     display(cooking)
 
     PARAMETER['description'] = Console().input("Enter description: ")
+    if PARAMETER['description'] == "_exit_":
+        selection_menu(option_dict['main menu'])
 
     clear()
     display(cooking)
 
     PARAMETER['format'] = Console().input("Enter format: ")
+    if PARAMETER['format'] == "_exit_":
+        selection_menu(option_dict['main menu'])
     data_entry_preview("parameter", PARAMETER)
 
 
@@ -365,7 +379,7 @@ def investigate_file():
 
     CSV_PATH = ABSOLUTE_PATH + path + '.csv'  ## ADJUST HERE
 
-    if path == 'abort':
+    if path == '_exit_':
         selection_menu(option_dict['main menu'])
     while not check_path(CSV_PATH):
 
@@ -375,7 +389,7 @@ def investigate_file():
         path = Console().input("Enter file name : ")
         CSV_PATH = ABSOLUTE_PATH + path + '.csv'
 
-        if path == 'abort':
+        if path == '_exit_':
             selection_menu(option_dict['main menu'])
 
     clear()
@@ -449,6 +463,10 @@ tag_dict = {
     ('validate change', 'modify_intent_tag'): "confirm intent",
     ('validate change', 'modify_parameter_tag'): "confirm parameter",
     ('validate change', 'modify_link_tag'): "confirm link",
+
+    ('modify', 'modify_intent_tag'): "modify intent",
+    ('modify', 'modify_parameter_tag'): "modify parameter",
+    ('modify', 'modify_link_tag'): "modify link",
 
     ('modify name', 'modify_menu_intent_tag'): "modify intent name",
     ('modify examples', 'modify_menu_intent_tag'): "modify intent examples",
@@ -531,18 +549,21 @@ option_dict = {
                            modify_entry,
                            ('name', 'INTENT'),
                            'validate change',
+                           'modify',
                            'cancel'],
     'modify intent examples': ['',
                                'modify_intent_tag',
                                modify_entry,
                                ('examples', 'INTENT'),
                                'validate change',
+                               'modify',
                                'cancel'],
     'modify intent description': ['',
                                   'modify_intent_tag',
                                   modify_entry,
                                   ('description', 'INTENT'),
                                   'validate change',
+                                  'modify',
                                   'cancel'],
     "add parameter": ['confirm ?',
                       'add_parameter_tag',
@@ -576,18 +597,21 @@ option_dict = {
                               modify_entry,
                               ('name', 'PARAMETER'),
                               'validate change',
+                              'modify',
                               'cancel'],
     'modify parameter description': ['',
                                      'modify_parameter_tag',
                                      modify_entry,
                                      ('description', 'PARAMETER'),
                                      'validate change',
+                                     'modify',
                                      'cancel'],
     'modify parameter format': ['',
                                 'modify_parameter_tag',
                                 modify_entry,
                                 ('format', 'PARAMETER'),
                                 'validate change',
+                                'modify',
                                 'cancel'],
     'add link': ['confirm ?',
                  'link_parameter_tag',
@@ -621,18 +645,21 @@ option_dict = {
                            modify_entry,
                            ('intent', 'INTENT_PARAMETER'),
                            'validate change',
+                           'modify',
                            'cancel'],
     'modify link parameter': ['',
                               'modify_link_tag',
                               modify_entry,
                               ('parameter', 'INTENT_PARAMETER'),
                               'validate change',
+                              'modify',
                               'cancel'],
     'modify link necessity': ['',
                               'modify_link_tag',
                               modify_entry,
                               ('necessity', 'INTENT_PARAMETER'),
                               'validate change',
+                              'modify',
                               'cancel'],
     'import csv': ['',
                    'add_csv_tag',
