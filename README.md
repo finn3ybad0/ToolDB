@@ -13,6 +13,7 @@ This project is an interactive console application for managing entries of inten
 - **Import CSV:** Validate and import intents and parameters from CSV files.
 - **Modify Entries:** Edit existing intents, parameters, and links.
 - **Validation and Preview:** Confirm and preview entries before finalizing changes.
+- **Abort Operation:** To abort an operation at any moment type "_\_exit_\_" and press _Enter_
 - **Quit:** Exit the application.
 
 ## Setting Up the Development Environment
